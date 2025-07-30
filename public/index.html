@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Server Control Panel</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Web Server Control Panel</h1>
+    <p>A modern interface to interact with your custom web server's HTTP and WebSocket endpoints in real-time.</p>
+
+    <div class="container">
+        <!-- HTTP POST Echo Section -->
+        <div class="feature-box">
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                HTTP POST Echo
+            </h2>
+            <p>Send data to the <code>/echo</code> endpoint. The server will immediately return your message.</p>
+            <textarea id="post-input" rows="4" placeholder="Type something to echo..."></textarea>
+            <button id="post-button">Send POST Request</button>
+            <h3>Server Response:</h3>
+            <pre id="post-response">Waiting for response...</pre>
+        </div>
+
+        <!-- WebSocket Echo Section -->
+        <div class="feature-box">
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"/></svg>
+                WebSocket Echo
+            </h2>
+            <p>Establish a persistent connection for real-time, bidirectional communication.</p>
+            <button id="ws-connect-button">Connect to WebSocket</button>
+            <div id="ws-controls" class="hidden">
+                <input type="text" id="ws-input" placeholder="Type a message...">
+                <button id="ws-send-button">Send Message</button>
+            </div>
+            <h3>WebSocket Log:</h3>
+            <div id="ws-log"></div>
+        </div>
+    </div>
+
+    <!-- The app.js script is still linked here -->
+    <script src="app.js"></script>
+</body>
+</html>

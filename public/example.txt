@@ -1,0 +1,4 @@
+Hello from a static file!
+
+This content is being served by the custom Node.js web server.
+This demonstrates the static file handling feature from Chapter 9 of the book.
