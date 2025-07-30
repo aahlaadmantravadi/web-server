@@ -12,6 +12,7 @@ export interface HTTPRequest {
     version: string;
     headers: Map<string, string>;
     body: Readable;
+    socket?: Socket; // <-- THE FIX IS HERE: Add the raw socket
 }
 
 // Represents an HTTP response to be sent.
